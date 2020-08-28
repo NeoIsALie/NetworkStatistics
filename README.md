@@ -1,2 +1,2 @@
-# NetworkStatistics
-Application for analysing hardware of computers in local network.
+# NetworkCourseProject
+Курсовой проект по дисциплине "Компьютерные сети".

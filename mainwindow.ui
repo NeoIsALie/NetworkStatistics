@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NetworkAudit</class>
+ <widget class="QMainWindow" name="NetworkAudit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>672</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="main_tab">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>791</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Devices">
+     <attribute name="title">
+      <string>Devices</string>
+     </attribute>
+     <widget class="QGroupBox" name="System">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>241</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>System Information</string>
+      </property>
+      <widget class="QPlainTextEdit" name="system_info">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>221</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="Processor">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>10</y>
+        <width>261</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Processor Information</string>
+      </property>
+      <widget class="QPlainTextEdit" name="processor_info">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>241</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="Graphics">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>190</y>
+        <width>241</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Graphics Information</string>
+      </property>
+      <widget class="QPlainTextEdit" name="graphics_info">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>221</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="Sound">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>190</y>
+        <width>261</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Sound Information</string>
+      </property>
+      <widget class="QPlainTextEdit" name="sound_info">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>241</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="Memory">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>370</y>
+        <width>241</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Memory Information</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scan_button">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>460</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Scan Network</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="device_list">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>131</width>
+        <height>421</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="memory_info">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>390</y>
+        <width>221</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Stats">
+     <attribute name="title">
+      <string>Stats</string>
+     </attribute>
+     <widget class="QWidget" name="chart_grid" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <widget class="QPlainTextEdit" name="os">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>141</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <property name="undoRedoEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="proc">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>30</y>
+         <width>141</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="videocard">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>250</y>
+         <width>141</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="soundcard">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>250</y>
+         <width>141</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="os_stats">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OS stats</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="processor_stats">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Processor stats</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="video_card_stats">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>230</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Video Card stats</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="sound_card_stats">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>230</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sound card stats</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="graphs">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>430</y>
+         <width>151</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Show Graphs</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>10</y>
+        <width>291</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Credentials">
+     <attribute name="title">
+      <string>Credentials</string>
+     </attribute>
+     <widget class="QGroupBox" name="wmi">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>251</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>WMI</string>
+      </property>
+      <widget class="QPlainTextEdit" name="wmi_login">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="wmi_password">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="wmi_save">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="ssh">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>251</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>SSH</string>
+      </property>
+      <widget class="QPlainTextEdit" name="ssh_login">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="ssh_password">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ssh_save">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>672</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
